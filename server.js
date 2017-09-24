@@ -38,7 +38,7 @@ app.use(function(req, res, next) {
     deploying to Heroku. Other platforms may require it
     as well. 
 */
-app.set('port', (process.env.PORT || 3000));
+var PORT = process.env.PORT || 8080;
 
 
 /*
@@ -56,11 +56,9 @@ db.conn.once('open', function() {
     router(app, db, __dirname);
 
     // go!
-    app.listen(app.get('port'), function () {
-        console.log('Server - listening on port '+app.get('port'));
-        console.log('Server - IDLE - waiting for the first connection');
-        console.log('================================================');
-    });
+    app.listen(PORT, function() { //add event listener for port number
+      console.log("App listening on PORT " + PORT);
+    }); 
 });
 
 
