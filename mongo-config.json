@@ -1,0 +1,11 @@
+{
+	    "development": {
+	        "MONGODB_URI": "mongodb://localhost/scraper_db"
+	    },
+	    "test": {
+	        "MONGODB_URI": "NOT_USED_IN_THIS_APPLICATION"
+	    },
+	    "production": {
+	        "MONGODB_URI": "mongodb://heroku_kxqr5h3j:f99mlvd8bmib724uvllep9nkf4@ds147884.mlab.com:47884/heroku_kxqr5h3j "
+	    }
+	}
